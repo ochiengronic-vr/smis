@@ -1,932 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-14SMLWLQD7"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    <title>TSMIS | School Management System</title>
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'G-14SMLWLQD7');
-    </script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <title>Rocky | Full Stack Developer</title>
-
-<link rel="manifest" href="manifest.json">
-
-<meta name="theme-color" content="#8b5cf6">
-
-<meta name="mobile-web-app-capable" content="yes">
-
-<meta name="apple-mobile-web-app-capable" content="yes">
-
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-<meta name="apple-mobile-web-app-title" content="Rocky Tech">
-
-
 </head>
 
 <body>
 
-    <!-- ============================= -->
-    <!-- NAVIGATION -->
-    <!-- ============================= -->
+    <!-- Application Container -->
+    <div class="app">
 
-    <header>
-        <nav>
+        <!-- Sidebar -->
+        <aside class="sidebar">
 
-            <button id="menuBtn" class="menu-btn" aria-label="Open navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="logo">
+                <h2>TSMIS</h2>
+                <span>School Management</span>
+            </div>
 
-            <ul id="navLinks">
+            <nav class="sidebar-nav">
 
-                <li>
-                    <a href="#home">Home</a>
-                </li>
+                <a href="#" class="nav-link active">
+                    <span>🏠</span>
+                    <span>Dashboard</span>
+                </a>
 
-                <li>
-                    <a href="#about">About</a>
-                </li>
+                <a href="student.html" class="nav-link">
+                    <span>👨‍🎓</span>
+                    <span>Students</span>
+                </a>
 
-                <li>
-                    <a href="#education">Education</a>
-                </li>
+                <a href="#" class="nav-link">
+                    <span>👨‍🏫</span>
+                    <span>Teachers</span>
+                </a>
 
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
+                <a href="#" class="nav-link">
+                    <span>🏫</span>
+                    <span>Classes</span>
+                </a>
 
-                <li>
-                    <a href="#graphic-design">Graphic Design</a>
-                </li>
+                <a href="#" class="nav-link">
+                    <span>📚</span>
+                    <span>Subjects</span>
+                </a>
 
-                <li>
-                    <a href="#services">Services</a>
-                </li>
+                <a href="#" class="nav-link">
+                    <span>📋</span>
+                    <span>Attendance</span>
+                </a>
 
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
+                <a href="#" class="nav-link">
+                    <span>📝</span>
+                    <span>Results</span>
+                </a>
 
-            </ul>
+                <a href="#" class="nav-link">
+                    <span>💰</span>
+                    <span>Fees</span>
+                </a>
 
-            <!-- Sample Projects -->
-            <div class="dropdown">
+                <a href="#" class="nav-link">
+                    <span>📢</span>
+                    <span>Notices</span>
+                </a>
 
-                <button>
-                    SAMPLE PROJECT
-                </button>
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="#" class="nav-link">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </a>
+
+                <a href="#" class="nav-link logout">
+                    <span>🚪</span>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Top Bar -->
+            <header class="topbar">
 
                 <div>
+                    <button id="menuButton" class="menu-button">
+                        ☰
+                    </button>
 
-                    <a href="restaurant.html">
-                        RESTAURANT MANAGEMENT SYSTEM
-                    </a>
-
+                    <h1>Dashboard</h1>
                 </div>
 
-            </div>
+                <div class="admin-profile">
 
-            <!-- Theme -->
-            <button id="themeBtn"
-                class="theme-btn"
-                aria-label="Switch to light mode">
-                🌙
-            </button>
+                    <button class="notification-button">
+                        🔔
+                    </button>
 
-        </nav>
-    </header>
-
-
-    <!-- ============================= -->
-    <!-- HERO -->
-    <!-- ============================= -->
-
-    <section class="hero" id="home">
-
-        <img
-            src="logo.jpeg"
-            alt="Rocky Profile"
-            class="profile"
-        >
-
-        <div class="hero-content">
-
-            <span class="hero-tag">
-                Welcome to my portfolio
-            </span>
-
-            <h1>
-                Hello, I'm <span>ROCKY</span>
-            </h1>
-
-            <p id="typingText"></p>
-
-            <div class="hero-buttons">
-
-                <a href="#contact" class="btn">
-                    Hire Me
-                </a>
-
-                <a href="#graphic-design" class="btn secondary-btn">
-                    View My Designs
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ============================= -->
-    <!-- ABOUT -->
-    <!-- ============================= -->
-
-    <section id="about">
-
-        <h2>
-            About Me
-        </h2>
-
-        <div class="card about-card">
-
-            <p>
-                I am Rocky, a Full Stack Web Developer and Graphic Designer
-                from Kenya, passionate about building modern digital
-                experiences and solving real-world problems with technology.
-            </p>
-
-            <p>
-                I work with web technologies such as HTML, CSS, JavaScript
-                and Python while continuously developing my software
-                engineering skills through practical projects.
-            </p>
-
-            <p>
-                I also create creative digital content including posters,
-                flyers, social media graphics, branding materials and
-                other visual designs.
-            </p>
-
-        </div>
-
-       <!-- Image section --> 
-        <main class="container">
-
-        <h1>Rocky</h1>
-
-        <p class="description">
-            Click the button to show or hide the image.
-        </p>
-
-        <div class="image-card">
-            <img 
-                src="rocky.png" 
-                alt="Rocky image"
-                id="image"
-            >
-        </div>
-
-        <button id="button" type="button">
-            Hide Image
-        </button>
-
-    </main>
-        <!-- ============================= -->
-        <!-- PROGRAMMING SKILLS -->
-        <!-- ============================= -->
-
-        <div class="skills-section">
-
-            <h2>
-                💻 Programming Skills
-            </h2>
-
-            <p class="section-intro">
-                My current programming skill levels.
-            </p>
-
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>JavaScript</span>
-                    <span>90%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <div
-                        class="skill-progress"
-                        data-skill="90">
+                    <div class="profile-info">
+                        <strong>Administrator</strong>
+                        <span>Super Admin</span>
                     </div>
-                </div>
 
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>Python</span>
-                    <span>85%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <div
-                        class="skill-progress"
-                        data-skill="85">
+                    <div class="profile-avatar">
+                        A
                     </div>
+
                 </div>
 
-            </div>
+            </header>
 
 
-            <div class="skill">
+            <!-- Dashboard -->
+            <section class="dashboard">
 
-                <div class="skill-info">
-                    <span>Java</span>
-                    <span>15%</span>
-                </div>
+                <!-- Welcome -->
+                <div class="welcome">
 
-                <div class="skill-bar">
-                    <div
-                        class="skill-progress"
-                        data-skill="15">
+                    <div>
+                        <h2>Good morning, Administrator 👋</h2>
+
+                        <p>
+                            Here's what's happening in your school today.
+                        </p>
                     </div>
+
+                    <button class="primary-button">
+                        + Add Student
+                    </button>
+
                 </div>
 
-            </div>
 
+                <!-- Statistics -->
+                <div class="stats-grid">
 
-            <div class="skill">
+                    <div class="stat-card">
 
-                <div class="skill-info">
-                    <span>C++</span>
-                    <span>10%</span>
-                </div>
+                        <div class="stat-icon">
+                            👨‍🎓
+                        </div>
 
-                <div class="skill-bar">
-                    <div
-                        class="skill-progress"
-                        data-skill="10">
+                        <div>
+                            <p>Total Students</p>
+                            <h3 id="studentCount">850</h3>
+                        </div>
+
                     </div>
-                </div>
 
-            </div>
 
-        </div>
+                    <div class="stat-card">
 
+                        <div class="stat-icon">
+                            👨‍🏫
+                        </div>
 
-        <!-- ============================= -->
-        <!-- DESIGN SKILLS -->
-        <!-- ============================= -->
+                        <div>
+                            <p>Total Teachers</p>
+                            <h3 id="teacherCount">42</h3>
+                        </div>
 
-        <div class="design-skills">
+                    </div>
 
-            <h2>
-                🎨 Graphic Design Skills
-            </h2>
 
-            <div class="skill-tags">
+                    <div class="stat-card">
 
-                <span>
-                    <i class="fas fa-image"></i>
-                    Poster Design
-                </span>
+                        <div class="stat-icon">
+                            🏫
+                        </div>
 
-                <span>
-                    <i class="fas fa-bullhorn"></i>
-                    Social Media Design
-                </span>
+                        <div>
+                            <p>Total Classes</p>
+                            <h3 id="classCount">18</h3>
+                        </div>
 
-                <span>
-                    <i class="fas fa-paint-brush"></i>
-                    Branding
-                </span>
+                    </div>
 
-                <span>
-                    <i class="fas fa-file-image"></i>
-                    Flyer Design
-                </span>
 
-                <span>
-                    <i class="fas fa-utensils"></i>
-                    Menu Design
-                </span>
+                    <div class="stat-card">
 
-                <span>
-                    <i class="fas fa-church"></i>
-                    Event Designs
-                </span>
+                        <div class="stat-icon">
+                            💰
+                        </div>
 
-            </div>
+                        <div>
+                            <p>Fees Collected</p>
+                            <h3>KSh 1.2M</h3>
+                        </div>
 
-        </div>
-
-    </section>
-
-
-    <!-- ============================= -->
-    <!-- EDUCATION -->
-    <!-- ============================= -->
-
-    <section id="education">
-
-        <h2>
-            🎓 Education
-        </h2>
-
-        <div class="education">
-
-            <div class="education-card">
-
-                <i class="fas fa-university"></i>
-
-                <h3>
-                    Kisii University
-                </h3>
-
-                <h4>
-                    Bachelor of Science in Software Engineering
-                </h4>
-
-                <p>
-                    <span>Focus:</span>
-                    Software Engineering
-                </p>
-
-                <p>
-                    <span>Status:</span>
-                    Current Student
-                </p>
-
-                <p>
-                    <span>Location:</span>
-                    Kisii, Kenya
-                </p>
-
-                <p>
-                    Passionate about building scalable web applications,
-                    cloud solutions and modern software systems.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ============================= -->
-    <!-- PROJECTS -->
-    <!-- ============================= -->
-
-    <section id="projects">
-
-        <h2>
-            🚀 My Projects
-        </h2>
-
-        <div class="projects">
-
-            <div class="project-card">
-
-                <i class="fas fa-utensils project-icon"></i>
-
-                <h3>
-                    Restaurant Management System
-                </h3>
-
-                <p>
-                    A web-based restaurant project designed to demonstrate
-                    frontend development and management functionality.
-                </p>
-
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
-
-                <a href="restaurant.html" class="view-btn">
-                    View Project →
-                </a>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <i class="fas fa-university project-icon"></i>
-
-                <h3>
-                    School Management System
-                </h3>
-
-                <p>
-                    A management system concept designed to help schools
-                    organize students, teachers, records and administration.
-                </p>
-
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>PHP</li>
-                    <li>Database</li>
-                </ul>
-
-                <a href="#contact" class="view-btn">
-                    Coming Soon
-                </a>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <i class="fas fa-globe project-icon"></i>
-
-                <h3>
-                    Personal Portfolio
-                </h3>
-
-                <p>
-                    A responsive personal portfolio showcasing my development,
-                    design and digital skills.
-                </p>
-
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Responsive Design</li>
-                </ul>
-
-                <a href="#home" class="view-btn">
-                    You're Here →
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ============================= -->
-    <!-- GRAPHIC DESIGN -->
-    <!-- ============================= -->
-
-    <section id="graphic-design">
-
-        <h2>
-            🎨 Graphic Design Portfolio
-        </h2>
-
-        <p class="section-intro">
-            Creative designs for brands, businesses, events and social media.
-        </p>
-
-
-        <div class="design-content">
-
-
-            <!-- DESIGN INTRO -->
-
-            <div class="design-card">
-
-                <div class="design-icon">
-                    <i class="fas fa-palette"></i>
-                </div>
-
-                <h3>
-                    My Creative Work
-                </h3>
-
-                <p>
-                    I create visually appealing posters, flyers, social media
-                    graphics, branding materials, menus and event designs.
-                </p>
-
-                <a
-                    href="PASTE-YOUR-CANVA-LINK-HERE"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn"
-                >
-                    View My Designs →
-                </a>
-
-            </div>
-
-
-            <!-- DESIGN TOOLS -->
-
-            <div class="design-tools">
-
-                <h3>
-                    🛠️ Design Tools
-                </h3>
-
-                <div class="tools">
-
-                    <span>
-                        <i class="fas fa-palette"></i>
-                        Canva
-                    </span>
-
-                    <span>
-                        <i class="fas fa-pen-nib"></i>
-                        Figma
-                    </span>
-
-                    <span>
-                        <i class="fas fa-image"></i>
-                        Photoshop
-                    </span>
-
-                    <span>
-                        <i class="fas fa-vector-square"></i>
-                        Illustrator
-                    </span>
+                    </div>
 
                 </div>
 
-            </div>
 
-        </div>
+                <!-- Dashboard Content -->
+                <div class="dashboard-grid">
 
-    </section>
+                    <!-- Recent Students -->
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>Recent Students</h3>
+                                <p>Recently registered students</p>
+                            </div>
+
+                            <button class="view-button">
+                                View All
+                            </button>
+
+                        </div>
 
 
-    <!-- ============================= -->
-    <!-- PRICING -->
-    <!-- ============================= -->
+                        <div class="table-container">
 
-    <section id="pricing">
+                            <table>
 
-        <h2>
-            💰 Services & Pricing
-        </h2>
+                                <thead>
+                                    <tr>
+                                        <th>Student</th>
+                                        <th>Admission No.</th>
+                                        <th>Class</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
 
-        <div class="pricing">
+                                <tbody>
+
+                                    <tr>
+                                        <td>Brian Otieno</td>
+                                        <td>TS001</td>
+                                        <td>Grade 8</td>
+                                        <td>
+                                            <span class="status active">
+                                                Active
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Mary Achieng</td>
+                                        <td>TS002</td>
+                                        <td>Grade 7</td>
+                                        <td>
+                                            <span class="status active">
+                                                Active
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Kevin Ouma</td>
+                                        <td>TS003</td>
+                                        <td>Grade 9</td>
+                                        <td>
+                                            <span class="status pending">
+                                                Pending
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
 
 
-            <div class="pricing-card">
+                    <!-- Quick Actions -->
+                    <div class="card">
 
-                <h3>
-                    Starter Website
-                </h3>
+                        <div class="card-header">
 
-                <div class="price">
-                    KSh 5,000
+                            <div>
+                                <h3>Quick Actions</h3>
+                                <p>Common school operations</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-actions">
+
+                            <button>
+                                👨‍🎓
+                                <span>Add Student</span>
+                            </button>
+
+                            <button>
+                                👨‍🏫
+                                <span>Add Teacher</span>
+                            </button>
+
+                            <button>
+                                📋
+                                <span>Take Attendance</span>
+                            </button>
+
+                            <button>
+                                📝
+                                <span>Enter Results</span>
+                            </button>
+
+                            <button>
+                                💰
+                                <span>Record Payment</span>
+                            </button>
+
+                            <button>
+                                📢
+                                <span>Create Notice</span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <p>
-                    Perfect for personal brands and small businesses.
-                </p>
+            </section>
 
-                <ul>
-                    <li>✔ Responsive website</li>
-                    <li>✔ HTML & CSS</li>
-                    <li>✔ Mobile friendly</li>
-                    <li>✔ Contact section</li>
-                </ul>
+        </main>
 
-                <a href="#contact" class="btn">
-                    Get Started
-                </a>
+    </div>
 
-            </div>
 
-
-            <div class="pricing-card featured">
-
-                <div class="popular">
-                    POPULAR
-                </div>
-
-                <h3>
-                    Professional Website
-                </h3>
-
-                <div class="price">
-                    KSh 15,000
-                </div>
-
-                <p>
-                    For businesses that need a professional online presence.
-                </p>
-
-                <ul>
-                    <li>✔ Everything in Starter</li>
-                    <li>✔ JavaScript functionality</li>
-                    <li>✔ Modern UI/UX</li>
-                    <li>✔ Animations</li>
-                    <li>✔ Basic SEO</li>
-                </ul>
-
-                <a href="#contact" class="btn">
-                    Hire Me
-                </a>
-
-            </div>
-
-
-            <div class="pricing-card">
-
-                <h3>
-                    Advanced System
-                </h3>
-
-                <div class="price">
-                    Custom
-                </div>
-
-                <p>
-                    For management systems and custom web applications.
-                </p>
-
-                <ul>
-                    <li>✔ Full Stack Development</li>
-                    <li>✔ Database integration</li>
-                    <li>✔ Authentication</li>
-                    <li>✔ API integration</li>
-                    <li>✔ Custom features</li>
-                </ul>
-
-                <a href="#contact" class="btn">
-                    Request Quote
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ============================= -->
-    <!-- SERVICES -->
-    <!-- ============================= -->
-
-    <section id="services">
-
-        <h2>
-            🚀 My Services
-        </h2>
-
-        <div class="services">
-
-
-            <div class="service-card">
-
-                <i class="fas fa-laptop-code"></i>
-
-                <h3>
-                    Web Development
-                </h3>
-
-                <p>
-                    Responsive and modern websites for individuals,
-                    businesses and organizations.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <i class="fas fa-layer-group"></i>
-
-                <h3>
-                    Full Stack Development
-                </h3>
-
-                <p>
-                    Frontend, backend, databases and complete web
-                    application solutions.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <i class="fas fa-palette"></i>
-
-                <h3>
-                    Graphic Design
-                </h3>
-
-                <p>
-                    Posters, flyers, social media graphics, branding,
-                    menus and event designs.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <i class="fas fa-bullhorn"></i>
-
-                <h3>
-                    Digital Marketing
-                </h3>
-
-                <p>
-                    Creative digital content and strategies that help
-                    businesses improve their online presence.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <i class="fas fa-robot"></i>
-
-                <h3>
-                    AI Solutions
-                </h3>
-
-                <p>
-                    Exploring AI tools and intelligent features for
-                    modern digital applications.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <i class="fas fa-mobile-alt"></i>
-
-                <h3>
-                    Responsive Design
-                </h3>
-
-                <p>
-                    Websites designed to work smoothly across phones,
-                    tablets and computers.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <i class="fas fa-rocket"></i>
-
-                <h3>
-                    Performance
-                </h3>
-
-                <p>
-                    Clean code, fast loading and user-friendly
-                    digital experiences.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <i class="fas fa-lightbulb"></i>
-
-                <h3>
-                    Problem Solving
-                </h3>
-
-                <p>
-                    Practical technology solutions for real-world
-                    problems.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ============================= -->
-    <!-- CONTACT -->
-    <!-- ============================= -->
-
-    <section id="contact">
-
-        <h2>
-            📩 Contact Me
-        </h2>
-
-        <div class="card">
-
-            <p class="contact-intro">
-                Have a project in mind? Let's work together.
-            </p>
-
-            <div class="contact-links">
-
-                <a href="mailto:ochiengronic@gmail.com">
-                    <i class="fas fa-envelope"></i>
-                    Email
-                </a>
-
-                <a href="tel:+254701186176">
-                    <i class="fas fa-phone"></i>
-                    Call
-                </a>
-
-                <a
-                    href="https://www.linkedin.com/in/ronic-ochieng-1ab3a823/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <i class="fab fa-linkedin"></i>
-                    LinkedIn
-                </a>
-
-                <a
-                    href="https://vm.tiktok.com/ZS9SYJoGpxoc5-n78Pu/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <i class="fab fa-tiktok"></i>
-                    TikTok
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ============================= -->
-    <!-- FOOTER -->
-    <!-- ============================= -->
-
-    <footer>
-
-        <p>
-            © <span id="currentYear"></span>
-            ROCKY | FULL STACK DEVELOPER & GRAPHIC DESIGNER ✨
-        </p>
-
-        <a
-            href="cv.pdf"
-            download
-            class="btn"
-        >
-            Download CV
-        </a>
-
-        <br><br>
-
-        <a href="https://maliwave.com">
-            @RONIC
-        </a>
-
-    </footer>
-
-
-    <!-- BACK TO TOP -->
-
-    <button id="topBtn" aria-label="Back to top">
-        ↑
-    </button>
-
-<a
-    href="https://wa.me/254701186176?text=Hello%20Rocky%2C%20I%20visited%20your%20portfolio"
-    class="whatsapp-btn"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
-
-    <!-- JavaScript -->
     <script src="script.js"></script>
+
 </body>
 </html>
